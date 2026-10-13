@@ -45,7 +45,7 @@ Para dar solución a los problemas de calidad identificados, se configuraron las
 ## 5. Flujo ETL desarrollado
 En la **Figura 3** (del diagrama completo) se detalla el proceso ETL implementado en la interfaz gráfica de Pentaho Data Integration (Spoon). Se observa claramente la extracción desde las dos fuentes (Excel y CSV), las dos transformaciones secuenciales de limpieza, la unión mediante *Stream lookup* y la carga hacia el archivo final.
 
-![Flujo ETL en Pentaho](Recursos\Imagenes\Diagrama_Final.png)
+![Flujo ETL en Pentaho](Recursos/Imagenes/Diagrama_Final.png)
 *<div align="center"><b>Figura 4.</b> Diagrama completo del flujo ETL implementado en Pentaho Data Integration.</div>*
 
 ## 6. Evidencia del resultado
