@@ -28,18 +28,18 @@ Durante la etapa de análisis y extracción se detectaron las siguientes inconsi
 Para dar solución a los problemas de calidad identificados, se configuraron las siguientes etapas en el flujo:
 - **Limpieza de Nombres y Apellidos:** Uso de un paso *Replace in string* para buscar y reemplazar los caracteres corruptos (`~` por `ñ`, `||` por vocales acentuadas) y estandarizar los campos textuales.
 
-![Transformación Nombres y Apellidos](Recursos\Imagenes\Transfromacion_nombres_apellidos.png)
+![Transformación Nombres y Apellidos](Recursos/Imagenes/Transfromacion_nombres_apellidos.png)
 *<div align="center"><b>Figura 1.</b> Limpieza de errores identificados en los campos de NOMBRE y APELLIDO.</div>*
 
 
 - **Validación y Limpieza de Fechas:** Uso de un segundo paso secuencial *Replace in string* empleando expresiones regulares (`^[^\d]+`) para eliminar de forma automática los caracteres inválidos iniciales.
 
-![Transformación Fecha estado](Recursos\Imagenes\Transformacion_fechas.png)
+![Transformación Fecha estado](Recursos/Imagenes/Transformacion_fechas.png)
 *<div align="center"><b>Figura 2.</b> Limpieza de errores identificados en el campo FECHA ESTADO.</div>*
 
 - **Combinación de Fuentes (Stream lookup):** Empleo de este componente para actuar como mecanismo de búsqueda en flujo, utilizando el campo `ID` como llave relacional para recuperar y adjuntar dinámicamente los campos de correo y teléfono al conjunto de datos principal.
 
-![Configuracion Stream Lookup](Recursos\Imagenes\Configuracion_strem_look_up.png)
+![Configuracion Stream Lookup](Recursos/Imagenes/Configuracion_strem_look_up.png)
 *<div align="center"><b>Figura 3.</b> Configuracion para recuparar campos usando ID del estudiante.</div>*
 
 ## 5. Flujo ETL desarrollado
@@ -51,10 +51,10 @@ En la **Figura 3** (del diagrama completo) se detalla el proceso ETL implementad
 ## 6. Evidencia del resultado
 Tras la ejecución exitosa del flujo sin errores (marcando `E=0` en las métricas del sistema), se generó el archivo de salida procesado. Como se evidencia en la **Figura 6**, los datos finales presentan una correcta depuración de caracteres y la integración exitosa de los campos de contacto multiorigen.
 
-![Evidencia de datos limpios en Excel](Recursos\Imagenes\Resultado_Antes.png)
+![Evidencia de datos limpios en Excel](Recursos/Imagenes/Resultado_Antes.png)
 *<div align="center"><b>Figura 5.</b> Archivo de salida Excel antes de realizar la limpieza.</div>*
 
-![Evidencia de datos limpios en Excel](Recursos\Imagenes\Resultado_Final.png)
+![Evidencia de datos limpios en Excel](Recursos/Imagenes/Resultado_Final.png)
 *<div align="center"><b>Figura 6.</b> Archivo de salida Excel mostrando los datos consolidados y estandarizados.</div>*
 
 ## 7. Relación con una arquitectura de Data Warehouse
