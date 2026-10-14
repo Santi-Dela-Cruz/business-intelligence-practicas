@@ -1,4 +1,4 @@
-#Business Intelligence
+# Business Intelligence
 ## Grupo C
 ### Integrantes:
 - Juan Francisco Chanatasig Garzón
