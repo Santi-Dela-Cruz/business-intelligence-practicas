@@ -124,9 +124,9 @@ En el contexto de Business Intelligence, el proceso ETL junto con el *Staging Ar
 
 **Evidencia:** https://share.gemini.google/4nwPu2KJ8DDB
 
-[fig1]: Recursos\Imagenes\Transfromacion_nombres_apellidos.png
-[fig2]: Recursos\Imagenes\Transformacion_fechas.png
-[fig3]: Recursos\Imagenes\Configuracion_strem_look_up.png
-[fig4]: Recursos\Imagenes\Diagrama_Final.png
-[fig5]: Recursos\Imagenes\Resultado_Antes.png
-[fig6]: Recursos\Imagenes\Resultado_Final.png
+[fig1]: Recursos/Imagenes/Transfromacion_nombres_apellidos.png
+[fig2]: Recursos/Imagenes/Transformacion_fechas.png
+[fig3]: Recursos/Imagenes/Configuracion_strem_look_up.png
+[fig4]: Recursos/Imagenes/Diagrama_Final.png
+[fig5]: Recursos/Imagenes/Resultado_Antes.png
+[fig6]: Recursos/Imagenes/Resultado_Final.png
