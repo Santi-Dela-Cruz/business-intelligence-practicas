@@ -4,7 +4,7 @@
 ### Facultad de Ingeniería de Sistemas
 
 **Asignatura:** Business Intelligence | **Paralelo:** GR2SW |
-**Integrantes:** Chanatasig Garzon Juan Francisco, Chimarro Bermeo Marlon Xavier, Davalos Cedeño Martion Alejandro, De La Cruz Cañar Kevin Santiago |
+**Integrantes:** Chanatasig Garzon Juan Francisco, Chimarro Bermeo Marlon Xavier, Dávalos Cedeño Martín Alejandro, De La Cruz Cañar Kevin Santiago |
 **Fecha:** martes 13 de octubre, 2026
 
 </div>
