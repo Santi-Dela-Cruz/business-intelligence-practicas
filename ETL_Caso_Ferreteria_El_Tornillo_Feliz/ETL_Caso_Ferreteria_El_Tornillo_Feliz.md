@@ -194,7 +194,7 @@ La Figura 9 muestra los 100 registros cargados en staging.productos_ferreteria_c
 | F011 · unidad_medida | 1 Lt | 1L |
 | F001 · precio_unitario | $8.50 | 8.50 |
 
-Revise los resultados de forma detallada en [Exportación Limpia Ferretería Tornillo Feliz](./ETL_Caso_Ferreteria_El_Tornillo_Feliz/Datos%20salida/productos_ferreteria_clean_export_to_postgres.csv)
+Revise los resultados de forma detallada en [Exportación Limpia Ferretería Tornillo Feliz](Datos%20salida/productos_ferreteria_clean_export_to_postgres.csv)
 
 
 ## 8 Conclusiones y relación con Business Intelligence
