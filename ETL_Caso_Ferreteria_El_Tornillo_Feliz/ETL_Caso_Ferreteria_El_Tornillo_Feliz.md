@@ -132,7 +132,6 @@ La eliminación de $ deja una representación textual del precio. No cambia auto
 | unidad_medida | 1 mt | 1 metro | N | N | N |
 | unidad_medida | 1 m | 1 metro | N | N | N |
 
-Nota. (vacío) significa dejar Replace with sin texto; no escribir los paréntesis. N equivale a No. La regla herre se conserva por fidelidad a la configuración proporcionada, aunque no aparece como categoría en los 100 registros del enunciado.
 
 ## 5 Configuración de la carga
 
