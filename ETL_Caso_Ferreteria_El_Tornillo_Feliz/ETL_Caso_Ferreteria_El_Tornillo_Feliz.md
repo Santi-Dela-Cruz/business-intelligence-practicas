@@ -6,7 +6,7 @@
 ---
 
 
-**Trabajo grupal** · Ferretería El Tornillo Feliz
+**Trabajo grupal**: Ferretería El Tornillo Feliz
 
 El proceso implementado extrae 100 productos de PostgreSQL, aplica reglas de limpieza en Pentaho Data Integration y carga los registros en una tabla de destino. El informe presenta la configuración de los pasos y los resultados observados en las capturas.
 
@@ -193,6 +193,8 @@ La Figura 9 muestra los 100 registros cargados en staging.productos_ferreteria_c
 | F010 · categoria | Pinturas | Pinturass |
 | F011 · unidad_medida | 1 Lt | 1L |
 | F001 · precio_unitario | $8.50 | 8.50 |
+
+Revise los resultados de forma detallada en [Exportación Limpia Ferretería Tornillo Feliz](<./ETL_Caso_Ferreteria_El_Tornillo_Feliz/Datos salida/productos_ferreteria_clean_export_to_postgres.csv>)
 
 
 ## 8 Conclusiones y relación con Business Intelligence
