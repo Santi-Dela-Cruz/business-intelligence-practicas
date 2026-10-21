@@ -86,32 +86,32 @@ Replace in string aplica búsquedas y sustituciones sobre categoria, unidad_medi
 
 *Figura 4. Reglas iniciales de reemplazo en Spoon*
 
-Las opciones useRegEx, Case sensitive y Whole Word se encuentran en N. Por tanto, la búsqueda literal no distingue mayúsculas y permite coincidencias parciales. La documentación del componente explica estas opciones [2].
+Las opciones useRegEx y Case sensitive se encuentran en N. La opción Whole Word (palabra completa) se configuró en Y para términos singulares o parciales específicos (como *Herramienta* o *pintura*) con el fin de evitar modificaciones erróneas sobre palabras que ya se encontraban en plural. La documentación del componente explica estas opciones [2].
 
 La eliminación de $ deja una representación textual del precio. No cambia automáticamente el tipo de dato. La captura de creación de la tabla de destino conserva precio_unitario como VARCHAR(20).
 
-**Tabla 2. Reglas originales de búsqueda y reemplazo**
+**Tabla 2. Reglas de búsqueda y reemplazo**
 
 | In stream field | Search | Replace with | RegEx | Case sens. | Whole Word |
 | --- | --- | --- | --- | --- | --- |
 | precio_unitario | $ | (vacío) | N | N | N |
 | categoria | herramientas | Herramientas | N | N | N |
 | categoria | HERRAMIENTAS | Herramientas | N | N | N |
-| categoria | Herramienta | Herramientas | N | N | N |
+| categoria | Herramienta | Herramientas | N | N | Y |
 | categoria | Htas. | Herramientas | N | N | N |
 | categoria | Htas | Herramientas | N | N | N |
 | categoria | herram. | Herramientas | N | N | N |
 | categoria | herre | Herramientas | N | N | N |
-| categoria | pintura | Pinturas | N | N | N |
-| categoria | PINTURA | Pinturas | N | N | N |
+| categoria | pintura | Pinturas | N | N | Y |
+| categoria | PINTURA | Pinturas | N | N | Y |
 | categoria | PINTURAS | Pinturas | N | N | N |
 | categoria | Pint. | Pinturas | N | N | N |
 | categoria | Pint | Pinturas | N | N | N |
 | categoria | ferreteria | Ferretería | N | N | N |
 | categoria | FERRETERIA | Ferretería | N | N | N |
 | categoria | Ferre | Ferretería | N | N | N |
-| categoria | sellador | Selladores | N | N | N |
-| categoria | Adhesivo | Adhesivos | N | N | N |
+| categoria | sellador | Selladores | N | N | Y |
+| categoria | Adhesivo | Adhesivos | N | N | Y |
 | categoria | adhesivos | Adhesivos | N | N | N |
 | categoria | fontaneria | Fontanería | N | N | N |
 | categoria | FONTANERIA | Fontanería | N | N | N |
@@ -187,9 +187,9 @@ La Figura 9 muestra los 100 registros cargados en staging.productos_ferreteria_c
 
 | Registro y campo | Valor original | Valor visible en la salida |
 | --- | --- | --- |
-| F001 · categoria | Herramientas | Herramientass |
+| F001 · categoria | Herramientas | Herramientas |
 | F002 · unidad_medida | 1 unidad | 1 und |
-| F010 · categoria | Pinturas | Pinturass |
+| F010 · categoria | Pinturas | Pinturas |
 | F011 · unidad_medida | 1 Lt | 1L |
 | F001 · precio_unitario | $8.50 | 8.50 |
 
@@ -213,4 +213,5 @@ Referencias presentadas en formato IEEE. Las capturas corresponden a evidencias 
 [2] Pentaho, “Fields string table,” documentación de Replace in String, versión 10.2. [En línea]. Disponible en: https://docs.pentaho.com/pdia-data-integration/10.2-data-integration/pdi-transformation-steps-reference-overview/replace-in-string/fields-string-table. [Consultado: 18-oct-2026].
 
 ## 10 Declaración del uso de inteligencia artificial
-Escribir ......
+
+Para la elaboración de este informe se utilizaron herramientas de Inteligencia Artificial en un porcentaje estimado del 10%, exclusivamente como asistencia para la revisión ortográfica, corrección de estilo y evaluación formativa del documento. Todo el diseño del flujo ETL, la ejecución en Pentaho Data Integration, el uso de PostgreSQL y el análisis técnico presentado son de total autoría de los integrantes del grupo, garantizando la integridad académica del trabajo.
