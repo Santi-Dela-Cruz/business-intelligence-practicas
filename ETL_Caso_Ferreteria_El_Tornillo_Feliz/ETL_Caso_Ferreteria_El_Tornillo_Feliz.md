@@ -86,7 +86,7 @@ Replace in string aplica búsquedas y sustituciones sobre categoria, unidad_medi
 
 *Figura 4. Reglas iniciales de reemplazo en Spoon*
 
-Las opciones useRegEx y Case sensitive se encuentran en N. La opción Whole Word (palabra completa) se configuró en Y para términos singulares o parciales específicos (como *Herramienta* o *pintura*) con el fin de evitar modificaciones erróneas sobre palabras que ya se encontraban en plural. La documentación del componente explica estas opciones [2].
+Las opciones useRegEx y Case sensitive se encuentran en N.
 
 La eliminación de $ deja una representación textual del precio. No cambia automáticamente el tipo de dato. La captura de creación de la tabla de destino conserva precio_unitario como VARCHAR(20).
 
@@ -97,21 +97,21 @@ La eliminación de $ deja una representación textual del precio. No cambia auto
 | precio_unitario | $ | (vacío) | N | N | N |
 | categoria | herramientas | Herramientas | N | N | N |
 | categoria | HERRAMIENTAS | Herramientas | N | N | N |
-| categoria | Herramienta | Herramientas | N | N | Y |
+| categoria | Herramienta | Herramientas | N | N | N |
 | categoria | Htas. | Herramientas | N | N | N |
 | categoria | Htas | Herramientas | N | N | N |
 | categoria | herram. | Herramientas | N | N | N |
 | categoria | herre | Herramientas | N | N | N |
-| categoria | pintura | Pinturas | N | N | Y |
-| categoria | PINTURA | Pinturas | N | N | Y |
+| categoria | pintura | Pinturas | N | N | N |
+| categoria | PINTURA | Pinturas | N | N | N |
 | categoria | PINTURAS | Pinturas | N | N | N |
 | categoria | Pint. | Pinturas | N | N | N |
 | categoria | Pint | Pinturas | N | N | N |
 | categoria | ferreteria | Ferretería | N | N | N |
 | categoria | FERRETERIA | Ferretería | N | N | N |
 | categoria | Ferre | Ferretería | N | N | N |
-| categoria | sellador | Selladores | N | N | Y |
-| categoria | Adhesivo | Adhesivos | N | N | Y |
+| categoria | sellador | Selladores | N | N | N |
+| categoria | Adhesivo | Adhesivos | N | N | N |
 | categoria | adhesivos | Adhesivos | N | N | N |
 | categoria | fontaneria | Fontanería | N | N | N |
 | categoria | FONTANERIA | Fontanería | N | N | N |
@@ -206,7 +206,7 @@ En una arquitectura analítica, el esquema staging sirve como espacio intermedio
 
 ## 9 Referencias bibliográficas
 
-Referencias presentadas en formato IEEE. Las capturas corresponden a evidencias del equipo y el conjunto de datos procede de la guía de práctica [1].
+Referencias presentadas en formato IEEE. Las capturas corresponden a evidencias del equipo y el conjunto de datos procede de la guía de práctica.
 
 [1] Escuela Politécnica Nacional, Facultad de Ingeniería de Sistemas, “2. ETL Initial Load,” guía de práctica de Business Intelligence, s. f., documento de clase facilitado para esta actividad.
 
