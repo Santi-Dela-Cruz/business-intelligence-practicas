@@ -1,6 +1,7 @@
 # ESCUELA POLITÉCNICA NACIONAL
 ## Facultad de Ingeniería de Sistemas
-### Business Intelligence — Grupo C
+### Business Intelligence
+### Grupo C
 
 ---
 
