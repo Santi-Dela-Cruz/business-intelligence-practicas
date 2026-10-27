@@ -21,3 +21,4 @@
 | **2** | Práctica 2 | Caso de Estudio: Ferretería El Tornillo Feliz | [Ver Práctica 2](./ETL_Caso_Ferreteria_El_Tornillo_Feliz/ETL_Caso_Ferreteria_El_Tornillo_Feliz.md) |
 | **3** | Práctica 3 | Modelo Estrella (Power Pivot) | [Ver Práctica 3](./Practica_3%20_Modelo_Estrella/Practica_3_Informe_Grupo_C.docx) |
 | **4** | Práctica 4 | Modelo Estrella en PostgreSQL | [Ver Práctica 4](./Practica_4_Modelo_Estrella_PostgreSQL/Practica_4_Modelo_Estrella_PostgreSQL_Informe.md) |
+| **5** | Práctica 5 | Creación Data Warehouse | [Ver Práctica 5](./Practica_5_Creacion_Data_Warehouse\Practica_5_Creacion_Data_Warehouse_Informe.md) |
