@@ -16,7 +16,7 @@
 
 
 
-El presente informe detalla el proceso de diseño, limpieza, carga y consulta de un modelo dimensional tipo estrella utilizando PostgreSQL. A partir de fuentes de datos desnormalizadas, se construyeron dimensiones y una tabla de hechos para analizar la desnutrición infantil en Ecuador, culminando con la ejecución de consultas analíticas (OLAP).
+El presente informe detalla el proceso de diseño, limpieza, carga y consulta de un modelo dimensional tipo estrella utilizando PostgreSQL. A partir de fuentes de datos desnormalizadas, se construyeron dimensiones y una tabla de hechos para analizar la desnutrición infantil en Ecuador, culminando con la ejecución de consultas analíticas (OLAP) [2].
 
 
 
@@ -48,7 +48,7 @@ El presente informe detalla el proceso de diseño, limpieza, carga y consulta de
 
 
 
-Implementar un modelo estrella completo en PostgreSQL a partir del dataset `desnutricion_infantil.csv`. El alcance abarca desde el diseño del esquema físico (DDL), la extracción, validación y limpieza de los datos hacia tablas de **staging** mediante Pentaho Data Integration, hasta la carga final en dimensiones con claves sustitutas (**surrogate keys**) y una tabla de hechos transaccional (DML), finalizando con la validación de los datos mediante consultas de negocio y un modelo en Power Pivot.
+Implementar un modelo estrella completo en PostgreSQL a partir del dataset `desnutricion_infantil.csv`, de acuerdo con los lineamientos de la guía de práctica [1]. El alcance abarca desde el diseño del esquema físico (DDL), la extracción, validación y limpieza de los datos hacia tablas de **staging** mediante Pentaho Data Integration, hasta la carga final en dimensiones con claves sustitutas (**surrogate keys**) y una tabla de hechos transaccional (DML), finalizando con la validación de los datos mediante consultas de negocio y un modelo en Power Pivot.
 
 
 
@@ -56,7 +56,7 @@ Implementar un modelo estrella completo en PostgreSQL a partir del dataset `desn
 
 
 
-El desarrollo se realizó íntegramente utilizando el motor de base de datos relacional PostgreSQL y su interfaz gráfica pgAdmin 4. La herramienta ETL utilizada fue Pentaho Data Integration (Spoon).
+El desarrollo se realizó íntegramente utilizando el motor de base de datos relacional PostgreSQL y su interfaz gráfica pgAdmin 4 [3]. La herramienta ETL utilizada fue Pentaho Data Integration (Spoon) [4].
 
 
 
@@ -70,7 +70,7 @@ Los datos provienen de un archivo en formato CSV provisto en la carpeta de entra
 
 
 
-Se definieron las estructuras físicas asegurando la integridad referencial. Para las dimensiones, se utilizaron campos `SERIAL PRIMARY KEY` para generar las **surrogate keys** automáticamente. La tabla de hechos se configuró recibiendo las claves foráneas de las dimensiones correspondientes.
+Se definieron las estructuras físicas asegurando la integridad referencial. Para las dimensiones, se utilizaron campos `SERIAL PRIMARY KEY` para generar las **surrogate keys** automáticamente. La tabla de hechos se configuró recibiendo las claves foráneas de las dimensiones correspondientes, siguiendo los principios de un modelo dimensional [2] y las capacidades de definición de esquemas de PostgreSQL [3].
 
 
 
@@ -96,7 +96,7 @@ Las tablas creadas en el esquema `public` de la base de datos fueron:
 
 
 
-Para garantizar la calidad de la información antes de poblar el modelo estrella, se documentó el proceso de importación y limpieza de las fuentes mediante transformaciones y un Job en Pentaho.
+Para garantizar la calidad de la información antes de poblar el modelo estrella, se documentó el proceso de importación y limpieza de las fuentes mediante transformaciones y un Job en Pentaho [4].
 
 
 
@@ -182,7 +182,7 @@ Se orquestó la ejecución secuencial de todas las transformaciones, iniciando p
 
 
 
-Para validar la correcta implementación del modelo estrella, se ejecutaron consultas analíticas en PostgreSQL que responden a requerimientos de negocio específicos utilizando cláusulas `JOIN` entre la tabla de hechos y sus dimensiones, y funciones de agregación (`COUNT`).
+Para validar la correcta implementación del modelo estrella, se ejecutaron consultas analíticas en PostgreSQL que responden a requerimientos de negocio específicos utilizando cláusulas `JOIN` entre la tabla de hechos y sus dimensiones, y funciones de agregación (`COUNT`), operaciones habituales en consultas sobre modelos dimensionales [2][3].
 
 
 
@@ -226,11 +226,11 @@ La consulta agrupa el total de atenciones por nombre de institución, revelando 
 
 
 
-Tras cargar los datos en PostgreSQL, se estableció una conexión ODBC (`Conexion_BI` hacia `localhost` usando el driver psqlODBC y las credenciales del usuario `postgres`) desde Microsoft Excel. Se importaron las 5 tablas al Modelo de Datos usando Power Query y se configuraron las relaciones en la Vista de Diagrama de Power Pivot.
+Tras cargar los datos en PostgreSQL, se estableció una conexión ODBC (`Conexion_BI` hacia `localhost` usando el driver psqlODBC y las credenciales del usuario `postgres`) desde Microsoft Excel. Se importaron las 5 tablas al Modelo de Datos usando Power Query [5] y se configuraron las relaciones en la Vista de Diagrama de Power Pivot.
 
 
 
-Como se observa en la **Figura 11**, el modelo final consta de una tabla de hechos (`fact_desnutricion`) que almacena las métricas numéricas, conectada a sus respectivas dimensiones a través de relaciones de uno a muchos mediante las claves sustitutas.
+Como se observa en la **Figura 11**, el modelo final consta de una tabla de hechos (`fact_desnutricion`) que almacena las métricas numéricas, conectada a sus respectivas dimensiones a través de relaciones de uno a muchos mediante las claves sustitutas, una estructura característica del esquema estrella [2][6].
 
 
 
@@ -244,15 +244,15 @@ Como se observa en la **Figura 11**, el modelo final consta de una tabla de hech
 
 
 
-Se demuestra exitosamente cómo pasar de un modelo de datos desnormalizado u orientado a transacciones (archivos planos), a un repositorio preparado para el análisis (Data Warehouse local) utilizando herramientas ETL (Pentaho) y motores relacionales (PostgreSQL).
+Se demuestra exitosamente cómo pasar de un modelo de datos desnormalizado u orientado a transacciones (archivos planos), a un repositorio preparado para el análisis (Data Warehouse local) utilizando herramientas ETL (Pentaho) y motores relacionales (PostgreSQL) [2][4].
 
 
 
-La implementación de claves sustitutas (`SERIAL PRIMARY KEY`) comprobó ser fundamental en el modelo dimensional para aislar al Data Warehouse de los cambios en los sistemas transaccionales fuente. La correcta configuración de carga en las tablas de staging y las validaciones posteriores garantizaron la calidad de los datos analizados.
+La implementación de claves sustitutas (`SERIAL PRIMARY KEY`) comprobó ser fundamental en el modelo dimensional para aislar al Data Warehouse de los cambios en los sistemas transaccionales fuente [2]. La correcta configuración de carga en las tablas de staging y las validaciones posteriores garantizaron la calidad de los datos analizados [4].
 
 
 
-Las consultas finales reafirman el propósito principal del modelado estrella en Inteligencia de Negocios: simplificar y acelerar las consultas analíticas. Al evitar los múltiples saltos requeridos en bases de datos normalizadas, las agregaciones de métricas se resolvieron con comandos `JOIN` directos y eficientes, entregando respuestas claras a las preguntas de negocio, permitiendo que herramientas de visualización como Excel (Power Pivot) consuman el modelo de forma óptima.
+Las consultas finales reafirman el propósito principal del modelado estrella en Inteligencia de Negocios: simplificar y acelerar las consultas analíticas [2][6]. Al evitar los múltiples saltos requeridos en bases de datos normalizadas, las agregaciones de métricas se resolvieron con comandos `JOIN` directos y eficientes, entregando respuestas claras a las preguntas de negocio, permitiendo que herramientas de visualización como Excel (Power Pivot) consuman el modelo de forma óptima.
 
 
 
