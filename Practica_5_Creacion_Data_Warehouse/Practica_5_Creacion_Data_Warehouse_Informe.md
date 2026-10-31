@@ -234,7 +234,7 @@ Como se observa en la **Figura 11**, el modelo final consta de una tabla de hech
 
 
 
-![Figura 11. Diagrama del modelo estrella diseñado en Power Pivot](./Recursos/2026-10-27_00-09.png)
+![Figura 11. Diagrama del modelo estrella diseñado en Power Pivot](Recursos/2026-10-27_00-09.png)
 
 *Figura 11. Diagrama del modelo estrella diseñado en Power Pivot.*
 
@@ -261,6 +261,16 @@ Las consultas finales reafirman el propósito principal del modelado estrella en
 
 
 [1] Escuela Politécnica Nacional, Facultad de Ingeniería de Sistemas, "Business Intelligence," guía de práctica, 2026.
+
+[2] Kimball, R., y Ross, M., *The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling*, 3.ª ed., Wiley, 2013.
+
+[3] PostgreSQL Global Development Group, "PostgreSQL Documentation: Data Definition," *PostgreSQL Documentation*. [En línea]. Disponible en: https://www.postgresql.org/docs/current/ddl.html. [Consulta: 30-oct-2026].
+
+[4] Hitachi Vantara, "Pentaho Data Integration," *Pentaho Documentation*. [En línea]. Disponible en: https://docs.pentaho.com/pdia/data-integration. [Consulta: 30-oct-2026].
+
+[5] Microsoft, "Power Query documentation," *Microsoft Learn*. [En línea]. Disponible en: https://learn.microsoft.com/en-us/power-query/. [Consulta: 30-oct-2026].
+
+[6] Microsoft, "Understand star schema and the importance for Power BI," *Microsoft Learn*. [En línea]. Disponible en: https://learn.microsoft.com/en-us/power-bi/guidance/star-schema. [Consulta: 30-oct-2026].
 
 
 
