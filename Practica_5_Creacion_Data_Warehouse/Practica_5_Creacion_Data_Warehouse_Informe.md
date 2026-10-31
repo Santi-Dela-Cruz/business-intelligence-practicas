@@ -40,7 +40,9 @@ El presente informe detalla el proceso de diseño, limpieza, carga y consulta de
 
 - [8 Referencias bibliográficas](#8-referencias-bibliográficas)
 
-- [9 Declaración del uso de inteligencia artificial](#9-declaración-del-uso-de-inteligencia-artificial)
+- [9 Entregables](#9-entregables)
+
+- [10 Declaración del uso de inteligencia artificial](#10-declaración-del-uso-de-inteligencia-artificial)
 
 
 
@@ -274,7 +276,22 @@ Las consultas finales reafirman el propósito principal del modelado estrella en
 
 
 
-## 9 Declaración del uso de inteligencia artificial
+## 9 Entregables
+
+Los siguientes archivos contienen los entregables técnicos utilizados para implementar el modelo estrella y el proceso ETL:
+
+1. [Script de creación de dimensiones y tabla de hechos (`create_dim_fact.sql`)](Datos%20salida/create_dim_fact.sql).
+2. [Carga de datos a la tabla de staging (`Load_Staging_raw.ktr`)](Datos%20salida/Load_Staging_raw.ktr).
+3. [Carga de la dimensión paciente (`load_dim_paciente.ktr`)](Datos%20salida/load_dim_paciente.ktr).
+4. [Carga de la dimensión lugar (`load_dim_lugar.ktr`)](Datos%20salida/load_dim_lugar.ktr).
+5. [Carga de la dimensión diagnóstico (`load_dim_diagnostico.ktr`)](Datos%20salida/load_dim_diagnostico.ktr).
+6. [Carga de la dimensión tiempo (`load_dim_tiempo.ktr`)](Datos%20salida/load_dim_tiempo.ktr).
+7. [Carga de la tabla de hechos (`load_fact_desnutricion.ktr`)](Datos%20salida/load_fact_desnutricion.ktr).
+8. [Job de ejecución completa del proceso ETL (`etl_job_desnutricion.kjb`)](Datos%20salida/etl_job_desnutricion.kjb).
+
+
+
+## 10 Declaración del uso de inteligencia artificial
 
 
 
