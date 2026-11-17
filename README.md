@@ -22,3 +22,8 @@
 | **3** | Práctica 3 | Modelo Estrella (Power Pivot) | [Ver Práctica 3](./Practica_3%20_Modelo_Estrella/Practica_3_Informe_Grupo_C.docx) |
 | **4** | Práctica 4 | Modelo Estrella en PostgreSQL | [Ver Práctica 4](./Practica_4_Modelo_Estrella_PostgreSQL/Practica_4_Modelo_Estrella_PostgreSQL_Informe.md) |
 | **5** | Práctica 5 | Creación Data Warehouse | [Ver Práctica 5](./Practica_5_Creacion_Data_Warehouse\Practica_5_Creacion_Data_Warehouse_Informe.md) |
+
+## Índice de Casos de Estudio
+| N.° | Nombre de la Práctica | Tema | Enlace al Documento |
+| :---: | :--- | :--- | :--- |
+| **2** | Caso de Estudio 2 | Constelación | [Ver Caso de Estudio Constelación](./Caso_Estudio_Constelacion/Caso_Estudio__Constelacion_Informe.md) |
